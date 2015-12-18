@@ -55,7 +55,7 @@ function createGraph() {
     .style('fill', function(d) { return color(d.symbol); })
 
     .on("mouseover", function(d) {
-      tooltip.text(d.name + ": $" + d.price);
+      tooltip.text(d.class + ": $" + d.stats);
       tooltip.style("visibility", "visible");
     })
     .on("mousemove", function() {

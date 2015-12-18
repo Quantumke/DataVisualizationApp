@@ -2,7 +2,7 @@ import csv
 import requests
 
 
-URL = "http://data.opennepal.net/sites/all/modules/pubdlcnt/pubdlcnt.php?file=http://data.opennepal.net/sites/default/files/resources/gross_output_by_industrial_division_at_current_prices.csv&nid=135"
+URL = "https://www.opendata.go.ke/api/views/kwqv-7djf/rows.csv?accessType=DOWNLOAD"
 
 
 def get_data():
@@ -11,10 +11,8 @@ def get_data():
     RESULTS = {'children': []}
     for line in csv.DictReader(data.splitlines(), skipinitialspace=True):
         RESULTS['children'].append({
-         'name': line['industrial_classification'],
-             'sample': line['industrial_classification'],
-             'sample': line['industrial_classification'],
-            'price': line['value']
-           
+            'timeperiod': line['Year'],
+            'class': line['Classification of accident victim'],
+            'stats': line['Numbers']
         })
     return RESULTS

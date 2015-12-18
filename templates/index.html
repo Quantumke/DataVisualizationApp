@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MIGRATION IN NAPAL</title>
+    <title>Rhapsody</title>
+    <meta charset="utf-8"/> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://d3js.org/queue.v1.min.js"></script>
     <link href={{ url_for('static', filename='./bower_components/bootstrap/dist/css/bootstrap.min.css') }} rel="stylesheet" media="screen">
     <link href={{ url_for('static', filename='main.css') }} rel="stylesheet" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
   <body>
 <div class ="header-bg">
@@ -16,16 +19,31 @@
 </div>
       <div class="title col-sm-8">
           <span>
-              This maps Show the number of people migrating outside the Nepal for foreign employment.
+              Distribution of top killer diseases countrywide.
           </span>
       </div>
        </div>
-   </div>
+ 
 
+<div class="row">
+<div class="col-md-8">
  <div class="container">
       <div id="chart"></div>
     </div>
+</div>
 
+<div class="col-md-4">
+<span>
+              Visualize the data by:
+          </span>
+<select class="form-control">
+            <option value="">Pie Chart</option>
+            <option value="">Bar Graph</option>
+            <option value="">Map</option>
+</select>            
+</div>
+</div>
+  </div>
     <script src={{ url_for('static', filename='./bower_components/jquery/dist/jquery.min.js') }}></script>
     <script src={{ url_for('static', filename='./bower_components/bootstrap/dist/js/bootstrap.min.js') }}></script>
     <script src={{ url_for('static', filename='./bower_components/d3/d3.min.js') }}></script>
